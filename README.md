@@ -2,11 +2,11 @@
 
 ### Info
 The current version of the VM has five instructions: halt(0), add(1), sub(2), mul(3), div(4).
-Halt stops execution.
-Add pops the first two values off the stack and pushes the sum of the two values back on to the stack.
-Sub pops the first two values off the stack and pushes the difference of the two values back onto the stack.
-Mul pops the first two values off the stack and pushes the product of the two value back onto the stack.
-Div pops the first two values off the stack and pushes the quotient of the two values back onto the stack.
+- Halt stops execution.
+- Add pops the first two values off the stack and pushes the sum of the two values back on to the stack.
+- Sub pops the first two values off the stack and pushes the difference of the two values back onto the stack.
+- Mul pops the first two values off the stack and pushes the product of the two value back onto the stack.
+- Div pops the first two values off the stack and pushes the quotient of the two values back onto the stack.
 
 You can write a program in this VM's native language, Sasm: a simple assembly language.
 You can compile you program into executable binaries using the steps below.
@@ -29,7 +29,7 @@ To Build:
 ### Compiling .sasm files to binary 
 To compile a .sasm file use the executable created when you built Sasm from source.
 Have a .sasm file located in the same directory as the Sasm executable.
-Use the command "./sasm *yourfilenamehere*.sasm" to compile your .sasm file into a binary that can be executed by this stack vm. After ding this you will have a new file called out.bin in the same directory as Sasm.
+Use the command "./sasm *yourfilenamehere*.sasm" to compile your .sasm file into a binary that can be executed by this stack vm. After doing this you will have a new file called out.bin in the same directory as Sasm.
 
 ### Running out.bin files in the VM
 To run an out.bin file, move the out.bin file to the same directory as the stack-vm executable. Then type the command "./stack-vm out.bin" to run your binary file.
