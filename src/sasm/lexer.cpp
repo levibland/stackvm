@@ -66,17 +66,58 @@ strings Lexer::lex(std::string s) {
                 }
                 break;
             case READBLOCK:
+                if (s[i] == beg_char && s[i + 1] != '"') {
+                    balance++;
+                    lexeme[j] = s[i];
+                    j++;
+                    i++;
+                } else if (s[i] == end_char) {
+                    balance--;
+                    lexeme[j] = s[i];
+                    j++;
+                    i++;
+                    if (balance <= 0) {
+                        state = DUMP;
+                    }
+                } else if (end_char == '"' && s[i] == '\\') {
+                    // TODO: fix this to actually record the chars.
+                    i += 2;
+                } else {
+                    lexeme[j] = s[i];
+                    j++;
+                    i++;
+                }
                 break;
             case SKIP:
+                if (my_isspace(s[i])) {
+                    i++;
+                } else {
+                    state = READCHAR;
+                }
                 break;
             case DUMP:
+                if (j < 0) {
+                    lexeme[j] = 0;  // Add null terminator to lexeme.
+                    strlst.push_back(lexeme);
+                    j = 0;
+                }
+                state = START;
                 break;
             case COMMENT:
+                if (s[i] != '\n') {
+                    i++;
+                } else {
+                    state = READCHAR;
+                }
                 break;
             case END:
+                i = len;
                 break;
         }
     }
-
+    if (j > 0) {
+        lexeme[j] = 0;
+        strlst.push_back(lexeme);
+    }
     return strlst;
 }
