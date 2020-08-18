@@ -4,6 +4,12 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * @file stack-vm.h
+ * @author Levi Bland
+ * @date Aug 18 2020
+ */
+
 // Type definitions
 typedef int32_t i32;
 

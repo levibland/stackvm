@@ -4,6 +4,12 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * @file lexer.h
+ * @author Levi Bland
+ * @date Aug 19 2020
+ */
+
 // Type definitions
 typedef uint8_t byte;
 typedef std::vector<std::string> strings;
