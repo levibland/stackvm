@@ -37,6 +37,6 @@ To run an out.bin file, move the out.bin file to the same directory as the stack
 ### Sasm syntax
 There are 4 operators in sasm, integer addition(+), integer subtraction(-), integer multiplication(*) and integer division(/). 
 
-Writing a basic program:
-3 6 + 2 * 3 -
+Writing a basic program: 3 6 + 2 * 3 -
+
 The program written above pushes 3 and 6 to the stack, then pops 3 and 6 off the stack, adds 3 and 6 together and then pushes the result(9) back onto the stack, it then pops 9(top of stack) of the stack and multiplies it by 2 pushing the product(18) back onto the stack, next, 3 is pushed onto the stack, then 3 and 18 are popped off the stack and 3 is subtracted from 18, to give a final result of 15.
