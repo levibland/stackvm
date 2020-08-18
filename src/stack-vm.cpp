@@ -1,6 +1,9 @@
 #include "../include/stack-vm.h"
 
 /**
+ * @file stack-vm.cpp
+ * @author Levi Bland
+ * @date Aug 18 2020
  * Instruction format
  * Header: 2 bits
  * Data: 30 bits
@@ -66,6 +69,24 @@ void StackVm::doPrimitive() {
             // TEMPORARY: log for debug purposes
             std::cout << "Add " << memory[sp - 1] << " " << memory[sp] << std::endl;
             memory[sp - 1] = memory[sp - 1] + memory[sp];
+            sp--;
+            break;
+        case 2: // Sub
+            // TEMPORARY: log for debug purposes
+            std::cout << "Sub " << memory[sp - 1] << " " << memory[sp] << std::endl;
+            memory[sp - 1] = memory[sp - 1] - memory[sp];
+            sp--;
+            break;
+        case 3: // Mul
+            // TEMPORARY: log for debug purposes
+            std::cout << "Mul " << memory[sp - 1] << " " << memory[sp] << std::endl;
+            memory[sp - 1] = memory[sp - 1] * memory[sp];
+            sp--;
+            break;
+        case 4: // Div
+            // TEMPORARY: log for debug purposes
+            std::cout << "Div " << memory[sp - 1] << " " << memory[sp] << std::endl;
+            memory[sp - 1] = memory[sp - 1] / memory[sp];
             sp--;
             break;
     }
