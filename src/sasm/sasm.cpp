@@ -13,7 +13,7 @@ bool isInteger(string s);
 
 bool isPrimitive(string s);
 
-i32 mapToNUmber(string s);
+i32 mapToNumber(string s);
 
 int main(int argc, char *argv[])
 {
@@ -61,7 +61,7 @@ vector<i32> compileToInstructions(strings s) {
         if (isInteger(s[i])) {
             instructions.push_back(stoi(s[i]));
         } else {
-            i32 instruction = mapToNUmber(s[i]);
+            i32 instruction = mapToNumber(s[i]);
             if (instruction != -1) {
                 instructions.push_back(instruction);
             } else {
@@ -69,6 +69,7 @@ vector<i32> compileToInstructions(strings s) {
             }
         }
     }
+    instructions.push_back(0x40000000); // Halt execution
     return instructions;
 }
 
