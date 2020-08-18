@@ -1,4 +1,4 @@
-#include "include/stack-vm.h"
+#include "../include/stack-vm.h"
 
 /**
  * Instruction format
@@ -58,14 +58,15 @@ void StackVm::doPrimitive() {
     // Define instruction set
     switch (dat) {
         case 0: // Halt execution
-            // TEMPORARY: for debug purposes
+            // TEMPORARY: log for debug purposes
             std::cout << "Halt" << std::endl;
             running = 0;
             break;
         case 1: // Add
-            // TEMPORARY: for debug purposes
+            // TEMPORARY: log for debug purposes
             std::cout << "Add " << memory[sp - 1] << " " << memory[sp] << std::endl;
             memory[sp - 1] = memory[sp - 1] + memory[sp];
+            sp--;
             break;
     }
 }
