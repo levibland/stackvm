@@ -1,5 +1,14 @@
 # A Simple implementation of a stack based Virtual Machine.
 
+## NOTE
+I do not intend to continue developing this.
+
+### Releases
+v0.1-prerelease is the first and last version to be released, it comes with binaries for stack-vm and sasm.
+
+### Installation
+To install both the stack-vm and sasm executable, use the command `sudo mv stack-vm sasm /usr/local/bin` so that you can use the executables universally.
+
 ### Info
 The current version of the VM has five instructions: halt(0), add(1), sub(2), mul(3), div(4).
 - Halt stops execution.
