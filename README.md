@@ -26,22 +26,25 @@ Prerequisites:
 - You must ensure you have g++ installed on your system(All Unix based OS's should ship with it, but some light releases may not).
 
 To Build:
-- Navigate to the project directory in terminal, and type "make".
+- Navigate to the project directory in terminal, and type `make`.
 
 ### Building Sasm from source
 Prerequisites:
 - Same as building the vm.
 
 To Build:
-- Navigate to projectdir/src/sasm in terminal, and type "make".
+- Navigate to projectdir/src/sasm in terminal, and type `make`.
+
+### Installing from source
+To install from source, make sure you have built both binaries, stack-vm and sasm. then navigate to the project directory and use the command `make install` to install the binaries globally.
 
 ### Compiling .sasm files to binary 
 To compile a .sasm file use the executable created when you built Sasm from source.
 Have a .sasm file located in the same directory as the Sasm executable.
-Use the command "./sasm *yourfilenamehere*.sasm" to compile your .sasm file into a binary that can be executed by this stack vm. After doing this you will have a new file called out.bin in the same directory as Sasm.
+Use the command `./sasm *yourfilenamehere*.sasm` to compile your .sasm file into a binary that can be executed by this stack vm. After doing this you will have a new file called out.bin in the same directory as Sasm.
 
 ### Running out.bin files in the VM
-To run an out.bin file, move the out.bin file to the same directory as the stack-vm executable. Then type the command "./stack-vm out.bin" to run your binary file.
+To run an out.bin file, move the out.bin file to the same directory as the stack-vm executable. Then type the command `./stack-vm out.bin` to run your binary file.
 
 ### Sasm syntax
 There are 4 operators in sasm, integer addition(+), integer subtraction(-), integer multiplication(*) and integer division(/). 
