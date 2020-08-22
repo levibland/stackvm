@@ -33,7 +33,7 @@ Prerequisites:
 - Same as building the vm.
 
 To Build:
-- Navigate to projectdir/src/sasm in terminal, and type `make`.
+- Change directory to `/<yourprojectdir>/src/sasm` in terminal, and type `make`.
 
 ### Installing from source
 To install from source, make sure you have built both binaries, stack-vm and sasm. then navigate to the project directory and use the command `make install` to install the binaries globally.
@@ -44,11 +44,11 @@ Have a .sasm file located in the same directory as the Sasm executable.
 Use the command `./sasm *yourfilenamehere*.sasm` to compile your .sasm file into a binary that can be executed by this stack vm. After doing this you will have a new file called out.bin in the same directory as Sasm.
 
 ### Running out.bin files in the VM
-To run an out.bin file, move the out.bin file to the same directory as the stack-vm executable. Then type the command `./stack-vm out.bin` to run your binary file.
+To run an out.bin file, move the `out.bin` file to the same directory as the stack-vm executable. Then type the command `./stack-vm out.bin` to run your binary file.
 
 ### Sasm syntax
-There are 4 operators in sasm, integer addition(+), integer subtraction(-), integer multiplication(*) and integer division(/). 
+There are 4 operators in sasm, integer addition(+), integer subtraction(-), integer multiplication(\*) and integer division(/). 
 
-Writing a basic program: 3 6 + 2 * 3 -
+Writing a basic program: `3 6 + 2 * 3 -`
 
 The program written above pushes 3 and 6 to the stack, then pops 3 and 6 off the stack, adds 3 and 6 together and then pushes the result(9) back onto the stack, it then pops 9(top of stack) of the stack and multiplies it by 2 pushing the product(18) back onto the stack, next, 3 is pushed onto the stack, then 3 and 18 are popped off the stack and 3 is subtracted from 18, to give a final result of 15.
