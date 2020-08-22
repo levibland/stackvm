@@ -7,6 +7,8 @@ I do not intend to continue developing this.
 v0.1-prerelease is the first and last version to be released, it comes with binaries for stack-vm and sasm.
 
 ### Installation
+Go to the releases page and download the stack-vm and sasm executables.
+
 To install both the stack-vm and sasm executable, use the command `sudo mv stack-vm sasm /usr/local/bin` so that you can use the executables universally.
 
 ### Info
