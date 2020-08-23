@@ -40,7 +40,7 @@ To Build:
 ### Installing from source
 To install from source, make sure you have built both binaries, stack-vm and sasm. then navigate to the project directory and use the command `make install` to install the binaries globally.
 
-### Compiling .sasm files to binary 
+### Compiling .sasm files to stack-vm executables 
 To compile a .sasm file use the executable created when you built Sasm from source.
 Have a .sasm file located in the same directory as the Sasm executable.
 Use the command `./sasm *yourfilenamehere*.sasm` or `sasm *yourfilenamehere.sasm*`(if you have installed the sasm binary) to compile your .sasm file into a binary that can be executed by this stack vm. After doing this you will have a new file called out.bin in the same directory as Sasm.
