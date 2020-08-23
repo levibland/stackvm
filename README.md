@@ -1,6 +1,8 @@
 # A Simple implementation of a stack based Virtual Machine.
 
 ## NOTE
+This repository is archived.
+
 I do not intend to continue developing this.
 
 ### Releases
