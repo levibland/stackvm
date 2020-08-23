@@ -4,7 +4,7 @@
  * @file lexer.cpp
  * @author Levi Bland
  * @date Aug 18 2020
- * The function of lexer.cpp is to create tokens from a stack-vm assembly file input file.
+ * The function of lexer.cpp is to create tokens from a stack-vm assembly input file.
  */
 
 strings Lexer::lex(std::string s) {
